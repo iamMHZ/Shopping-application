@@ -6,10 +6,13 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 import com.ztech.z_shop.R;
+import com.ztech.z_shop.controller.adapters.HeaderViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         setupToolbar();
+        setupViewPager();
 
+
+    }
+
+    private void setupViewPager() {
+        viewPager = findViewById(R.id.header_view_pager);
+        HeaderViewPagerAdapter adapter = new HeaderViewPagerAdapter(this);
+        viewPager.setAdapter(adapter);
 
     }
 
