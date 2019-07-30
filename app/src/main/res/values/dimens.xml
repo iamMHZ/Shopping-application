@@ -4,5 +4,7 @@
     <dimen name="_1_x_large_margin">6dp</dimen>
     <dimen name="_2_x_large_margin">9dp</dimen>
     <dimen name="_3_x_large_margin">12dp</dimen>
+    <dimen name="card_view_corner_radius">7dp</dimen>
+    <dimen name="card_view_elevation">5dp</dimen>
 
 </resources>

@@ -6,13 +6,20 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.ztech.z_shop.R;
+import com.ztech.z_shop.controller.adapters.CategoryAdapter;
 import com.ztech.z_shop.controller.adapters.HeaderViewPagerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
+    private RecyclerView categoryRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +29,33 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
         setupViewPager();
+        setupRecyclerView();
 
+
+    }
+
+    private void setupRecyclerView() {
+
+
+        categoryRecyclerView = findViewById(R.id.category_recycler_view);
+
+        List<String> stringList = new ArrayList<>();
+
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+        stringList.add("خودرو");
+
+        CategoryAdapter categoryAdapter = new CategoryAdapter(this, stringList);
+
+        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+
+
+        categoryRecyclerView.setAdapter(categoryAdapter);
 
     }
 
