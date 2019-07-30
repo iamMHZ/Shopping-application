@@ -41,14 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
         List<String> stringList = new ArrayList<>();
 
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
-        stringList.add("خودرو");
+        stringList.add("کالای دیجیتال");
+        stringList.add("ارایشی، بهداشتی وسلامت");
+        stringList.add("خودرو، ابزار و اداری");
+        stringList.add("مد و پوشاک");
+        stringList.add("خانه و اشپزخانه");
+        stringList.add("کتاب،لوازم تحریر و هنر");
+        stringList.add("اسباب بازی،کودک و نوزاد");
+        stringList.add("ورزش و سفر");
+        stringList.add("خوذدنی و آشیدنی");
 
         CategoryAdapter categoryAdapter = new CategoryAdapter(this, stringList);
 
