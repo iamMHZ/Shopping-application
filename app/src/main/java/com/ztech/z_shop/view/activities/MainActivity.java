@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         CategoryAdapter categoryAdapter = new CategoryAdapter(this, stringList);
 
-        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
 
         categoryRecyclerView.setAdapter(categoryAdapter);

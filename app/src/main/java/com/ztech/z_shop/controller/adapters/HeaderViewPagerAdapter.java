@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
@@ -31,7 +31,7 @@ public class HeaderViewPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (LinearLayout) object;
+        return view == (RelativeLayout ) object;
     }
 
     @NonNull
@@ -55,8 +55,8 @@ public class HeaderViewPagerAdapter extends PagerAdapter {
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         // inorder to free the heap memory :
-        //  the root element for R.layout.header_view_pager_swipe_layout is a LinearLayout
-        container.removeView((LinearLayout) object);
+        //  the root element for R.layout.header_view_pager_swipe_layout is a RelativeLayout
+        container.removeView((RelativeLayout) object);
 
     }
 }
