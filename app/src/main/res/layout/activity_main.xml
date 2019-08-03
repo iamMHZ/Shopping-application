@@ -60,6 +60,18 @@
 
                     </androidx.recyclerview.widget.RecyclerView>
 
+
+                    <TextView
+                        android:layout_marginRight="@dimen/_2_x_large_margin"
+                        android:textSize="@dimen/large_text_size"
+                        android:textColor="#CC1919"
+                        android:text="پیشنهاد ویژه"
+                        android:layout_marginTop="@dimen/_2_x_large_margin"
+                        android:layout_below="@id/category_recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
                 </RelativeLayout>
 
             </androidx.core.widget.NestedScrollView>

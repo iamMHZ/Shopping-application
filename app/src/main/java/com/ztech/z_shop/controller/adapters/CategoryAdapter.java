@@ -41,6 +41,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     }
 
+    public void setTitleList(List<String> titleList) {
+        this.titleList = titleList;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
         return titleList.size();
