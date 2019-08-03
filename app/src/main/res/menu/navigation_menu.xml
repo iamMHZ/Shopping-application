@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/navigation_menu_main_activity"
@@ -9,5 +12,35 @@
         android:id="@+id/navigation_menu_profile"
         android:icon="@drawable/ic_format_list_bulleted_black_32dp"
         android:title="لیست دسته بندی ها"></item>
+
+
+    <item
+        android:id="@+id/navigation_menu_shopping"
+        android:icon="@drawable/ic_shopping_cart_gray_32dp"
+        android:title="سبد خرید" />
+
+
+    <item
+        android:id="@+id/navigation_menu_special_offers"
+        android:icon="@drawable/ic_star_gray_32dp"
+        android:title="پیشنهاد ویژه" />
+
+    <item
+        android:id="@+id/navigation_menu_most_sold"
+        android:icon="@drawable/ic_star_gray_32dp"
+        android:title="پرفروش ترین ها" />
+    <item
+        android:id="@+id/navigation_menu_most_visited"
+        android:icon="@drawable/ic_star_gray_32dp"
+        android:title="پربازدیدترین ها" />
+    <item
+        android:id="@+id/navigation_menu_newest"
+        android:icon="@drawable/ic_star_gray_32dp"
+        android:title="جدیدترین ها" />
+    <item
+        android:id="@+id/navigation_menu_settings"
+        android:icon="@drawable/ic_settings_black_32dp"
+        android:title="تنظیمات" />
+
 
 </menu>

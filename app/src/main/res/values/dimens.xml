@@ -15,4 +15,7 @@
     <dimen name="timer_width">30dp</dimen>
     <dimen name="timer_height">27dp</dimen>
 
+    <dimen name="register_icon_width">30dp</dimen>
+    <dimen name="register_icon_height">30dp</dimen>
+
 </resources>

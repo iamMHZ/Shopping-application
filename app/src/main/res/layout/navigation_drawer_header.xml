@@ -7,21 +7,21 @@
 
     <ImageView
         android:id="@+id/register_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/register_icon_width"
+        android:layout_height="@dimen/register_icon_height"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/_4_x_large_margin"
-        android:src="@drawable/ic_person_black_24dp" />
+        android:src="@drawable/ic_person_white_32dp" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="31dp"
         android:layout_alignBottom="@+id/register_icon"
-        android:layout_marginBottom="-2dp"
         android:layout_toLeftOf="@+id/register_icon"
         android:background="@drawable/register_button_style"
         android:gravity="center"
-        android:text="ورود و ثبت نام" />
+        android:text="ورود و ثبت نام"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
