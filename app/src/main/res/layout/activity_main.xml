@@ -2,6 +2,7 @@
 
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl">
@@ -61,16 +62,89 @@
                     </androidx.recyclerview.widget.RecyclerView>
 
 
-                    <TextView
-                        android:layout_marginRight="@dimen/_2_x_large_margin"
-                        android:textSize="@dimen/large_text_size"
-                        android:textColor="#CC1919"
-                        android:text="پیشنهاد ویژه"
-                        android:layout_marginTop="@dimen/_2_x_large_margin"
-                        android:layout_below="@id/category_recycler_view"
+                    <LinearLayout
+                        android:id="@+id/special_offers_layout"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/category_recycler_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_1_x_large_margin">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_4_x_large_margin"
+                            android:layout_marginTop="@dimen/_2_x_large_margin"
+                            android:layout_marginRight="@dimen/_2_x_large_margin"
+                            android:text="پیشنهاد ویژه"
+                            android:textColor="@color/dark_red"
+                            android:textSize="@dimen/large_text_size" />
+
+                        <TextView
+                            android:id="@+id/timer_seconds"
+                            android:layout_width="@dimen/timer_width"
+                            android:layout_height="@dimen/timer_height"
+                            android:layout_marginTop="@dimen/_2_x_large_margin"
+                            android:layout_marginRight="@dimen/_2_x_large_margin"
+                            android:layout_marginBottom="@dimen/_1_x_large_margin"
+                            android:background="@color/gray"
+                            android:paddingLeft="@dimen/very_small_margin"
+                            android:paddingRight="@dimen/very_small_margin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text_size"
+                            tools:text="15" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/small_margin"
+
+                            android:layout_marginTop="@dimen/_3_x_large_margin"
+                            android:layout_marginRight="@dimen/small_margin"
+                            android:paddingLeft="@dimen/very_small_margin"
+                            android:paddingRight="@dimen/very_small_margin"
+                            android:text=":" />
+
+                        <TextView
+                            android:id="@+id/timer_minutes"
+                            android:layout_width="@dimen/timer_width"
+                            android:layout_height="@dimen/timer_height"
+                            android:layout_marginTop="@dimen/_2_x_large_margin"
+                            android:layout_marginBottom="@dimen/_1_x_large_margin"
+                            android:background="@color/gray"
+                            android:paddingLeft="@dimen/very_small_margin"
+                            android:paddingRight="@dimen/very_small_margin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text_size"
+                            tools:text="15" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/small_margin"
+
+                            android:layout_marginTop="@dimen/_3_x_large_margin"
+                            android:layout_marginRight="@dimen/small_margin"
+                            android:paddingLeft="@dimen/very_small_margin"
+                            android:paddingRight="@dimen/very_small_margin"
+                            android:text=":" />
+
+
+                        <TextView
+                            android:id="@+id/timer_hours"
+                            android:layout_width="@dimen/timer_width"
+                            android:layout_height="@dimen/timer_height"
+                            android:layout_marginTop="@dimen/_2_x_large_margin"
+                            android:layout_marginBottom="@dimen/_1_x_large_margin"
+                            android:background="@color/gray"
+                            android:paddingLeft="@dimen/very_small_margin"
+                            android:paddingRight="@dimen/very_small_margin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text_size"
+                            tools:text="15" />
+
+
+                    </LinearLayout>
 
                 </RelativeLayout>
 

@@ -1,13 +1,18 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="small_margin">3dp</dimen>
+    <dimen name="very_small_margin">2dp</dimen>
     <dimen name="_1_x_large_margin">6dp</dimen>
     <dimen name="_2_x_large_margin">9dp</dimen>
     <dimen name="_3_x_large_margin">12dp</dimen>
+    <dimen name="_4_x_large_margin">15dp</dimen>
     <dimen name="card_view_corner_radius">7dp</dimen>
     <dimen name="card_view_elevation">5dp</dimen>
     <dimen name="small_text_size">15dp</dimen>
     <dimen name="medium_text_size">18dp</dimen>
     <dimen name="large_text_size">21dp</dimen>
+
+    <dimen name="timer_width">30dp</dimen>
+    <dimen name="timer_height">27dp</dimen>
 
 </resources>

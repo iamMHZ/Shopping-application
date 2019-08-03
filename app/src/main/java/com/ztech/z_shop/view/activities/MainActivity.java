@@ -3,6 +3,7 @@ package com.ztech.z_shop.view.activities;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private RecyclerView categoryRecyclerView;
 
+    private TextView timerSeconds;
+    private TextView timerMinutes;
+    private TextView timerHours;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,20 @@ public class MainActivity extends AppCompatActivity {
         setupToolbar();
         setupViewPager();
         setupRecyclerView();
+        setupCountDownTimer();
+
+
+    }
+
+    private void setupCountDownTimer() {
+        timerSeconds = findViewById(R.id.timer_seconds);
+        timerMinutes = findViewById(R.id.timer_minutes);
+        timerHours = findViewById(R.id.timer_hours);
+
+
+        MyCountDownTimer myCountDownTimer = new MyCountDownTimer(4600000, 1000);
+
+        myCountDownTimer.start();
 
 
     }
@@ -92,5 +111,45 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private class MyCountDownTimer extends android.os.CountDownTimer {
+
+
+        /**
+         * @param millisInFuture    The number of millis in the future from the call
+         *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
+         *                          is called.
+         * @param countDownInterval The interval along the way to receive
+         *                          {@link #onTick(long)} callbacks.
+         */
+        public MyCountDownTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+
+
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+
+
+            int seconds = (int) (millisUntilFinished / 1000) % 60;
+            int minutes = (int) ((millisUntilFinished / (1000 * 60)) % 60);
+            int hours = (int) ((millisUntilFinished / (1000 * 60 * 60)) % 24);
+
+
+
+            timerSeconds.setText(String.format("%02d" , seconds));
+            timerMinutes.setText(String.format("%02d" , minutes));
+            timerHours.setText(String.format("%02d" , hours));
+
+
+        }
+
+        @Override
+        public void onFinish() {
+
+        }
     }
 }
