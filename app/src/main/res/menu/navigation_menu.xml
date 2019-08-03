@@ -3,9 +3,11 @@
 
     <item
         android:id="@+id/navigation_menu_main_activity"
-        android:title="صفحه اصلی"></item>
+        android:icon="@drawable/ic_home_black_32dp"
+        android:title="خانه"></item>
     <item
         android:id="@+id/navigation_menu_profile"
-        android:title="پروفایل کاربری"></item>
+        android:icon="@drawable/ic_format_list_bulleted_black_32dp"
+        android:title="لیست دسته بندی ها"></item>
 
 </menu>

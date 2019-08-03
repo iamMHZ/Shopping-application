@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         timerHours = findViewById(R.id.timer_hours);
 
 
+        //  TODO : getting milliesInFuture and countDownInterval from an Api
         MyCountDownTimer myCountDownTimer = new MyCountDownTimer(4600000, 1000);
 
         myCountDownTimer.start();
@@ -139,10 +140,9 @@ public class MainActivity extends AppCompatActivity {
             int hours = (int) ((millisUntilFinished / (1000 * 60 * 60)) % 24);
 
 
-
-            timerSeconds.setText(String.format("%02d" , seconds));
-            timerMinutes.setText(String.format("%02d" , minutes));
-            timerHours.setText(String.format("%02d" , hours));
+            timerSeconds.setText(String.format("%02d", seconds));
+            timerMinutes.setText(String.format("%02d", minutes));
+            timerHours.setText(String.format("%02d", hours));
 
 
         }
